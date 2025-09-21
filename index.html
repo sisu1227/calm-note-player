@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calm Note Player</title>
+</head>
+<body>
+  <h2>Relax and Study</h2>
+  <audio id="player" controls autoplay>
+    <source src="1.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    // دریافت شماره آهنگ از آدرس (مثلاً ?track=5)
+    const params = new URLSearchParams(window.location.search);
+    const trackNum = params.get('track') || '1';
+    document.querySelector('source').src = trackNum + '.mp3';
+    document.getElementById('player').load();
+  </script>
+</body>
+</html>
