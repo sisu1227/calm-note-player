@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calm Note - Track 1</title>
   <style>
     body {
-      background: linear-gradient(to right, #667eea, #764ba2);
+      background: url('https://raw.githubusercontent.com/sisu1227/calm-note-player/main/images/back.png') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: sans-serif;
     }
     .player {
       background: rgba(255, 255, 255, 0.85);
       padding: 20px;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      width: 300px;
       text-align: center;
     }
-    .player h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-    audio {
-      width: 100%;
-      border-radius: 10px;
-      outline: none;
+    .player img {
+      max-width: 150px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
   <div class="player">
+    <img src="https://raw.githubusercontent.com/sisu1227/calm-note-player/main/images/logo.png" alt="Logo">
     <h2>Relaxing Track 1</h2>
     <audio controls autoplay>
       <source src="track1.mp3" type="audio/mpeg">
