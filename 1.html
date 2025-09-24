@@ -19,7 +19,8 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      max-width: 120px;
+      width: 80px; /* تغییر اندازه لوگو */
+      height: auto;
     }
     .player {
       background: rgba(255, 255, 255, 0.85);
@@ -27,14 +28,16 @@
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       text-align: center;
-      max-width: 500px;
+      max-width: 600px; /* افزایش عرض حداکثری پلیر */
       width: 100%;
+      padding-bottom: 30px; /* فاصله پایین پلیر */
     }
-    .player img {
-      max-width: 120px;
-      width: 100%;
+    .player h2 {
+      font-size: 24px; /* تنظیم اندازه فونت عنوان */
       margin-bottom: 20px;
-      object-fit: contain;
+    }
+    .player audio {
+      width: 100%;
     }
   </style>
 </head>
