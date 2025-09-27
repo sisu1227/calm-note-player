@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Calm Note - Track 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       background: url('https://sisu1227.github.io/calm-note-player/back.png') no-repeat center center fixed;
@@ -12,33 +13,75 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      font-family: sans-serif;
-      position: relative; /* برای قرار دادن لوگو در گوشه */
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      overflow: hidden;
     }
+
     .logo {
       position: absolute;
       top: 20px;
       right: 20px;
-      width: 80px; /* تغییر اندازه لوگو */
+      width: 90px;
       height: auto;
+      animation: fadeIn 2s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
     .player {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
-      max-width: 600px; /* افزایش عرض حداکثری پلیر */
+      max-width: 600px;
       width: 100%;
-      padding-bottom: 30px; /* فاصله پایین پلیر */
+      transition: transform 0.3s ease-in-out;
+      animation: slideUp 1s ease-out;
     }
+
+    .player:hover {
+      transform: translateY(-10px);
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .player h2 {
-      font-size: 24px; /* تنظیم اندازه فونت عنوان */
+      font-size: 24px;
       margin-bottom: 20px;
+      color: #333;
+      font-weight: 500;
     }
+
     .player audio {
       width: 100%;
+      border-radius: 5px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      padding: 5px;
     }
+
+    .player audio::-webkit-media-controls {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 5px;
+    }
+
   </style>
   <link rel="icon" href="https://sisu1227.github.io/calm-note-player/favicon.ico" type="image/x-icon">
 </head>
@@ -55,3 +98,4 @@
   </div>
 </body>
 </html>
+
