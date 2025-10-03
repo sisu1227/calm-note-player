@@ -58,7 +58,7 @@
       transition: transform 0.3s ease-in-out;
       animation: slideUp 1s ease-out;
       border: none; /* حذف کادر */
-      background-color: transparent; /* حذف پس‌زمینه سفید */
+      background-color: transparent; /* حذف پس‌زمینه */
       box-shadow: none; /* حذف سایه */
     }
 
@@ -84,14 +84,13 @@
     .player audio {
       width: 100%;
       border-radius: 5px;
-      background: linear-gradient(45deg, #667eea, #764ba2);
+      background: transparent; /* حذف رنگ پس‌زمینه */
       padding: 5px;
-      border: none;
-      background-color: transparent; /* حذف پس‌زمینه */
+      border: none; /* حذف حاشیه */
     }
 
     .player audio::-webkit-media-controls {
-      background: linear-gradient(45deg, #667eea, #764ba2);
+      background: transparent; /* حذف پس‌زمینه */
       border-radius: 5px;
     }
 
@@ -111,6 +110,7 @@
   </div>
 </body>
 </html>
+
 
 
 
