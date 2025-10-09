@@ -15,25 +15,15 @@
       font-family: 'Roboto', sans-serif;
       position: relative;
       overflow: hidden;
+      flex-direction: column; /* اضافه شده برای قرار دادن برند در بالا */
     }
 
-    /* خطوط هنری محو شبیه به موج‌های صوتی */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(transparent, transparent 4px, rgba(0, 0, 0, 0.05) 4px, rgba(0, 0, 0, 0.05) 6px);
-      background-size: 100% 50px;
-      opacity: 0.1;
-    }
-
+    /* لوگو در وسط و بالای صفحه */
     .logo {
       position: absolute;
       top: 20px;
-      right: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 90px;
       height: auto;
       animation: fadeIn 2s ease-in-out;
@@ -57,9 +47,11 @@
       width: 100%;
       transition: transform 0.3s ease-in-out;
       animation: slideUp 1s ease-out;
-      border: none; /* حذف کادر */
-      background-color: transparent; /* حذف پس‌زمینه */
-      box-shadow: none; /* حذف سایه */
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
+      margin-top: 20px; /* فاصله بین پلیر و لوگو */
+      margin-bottom: 50px; /* فاصله کمتر از پایین */
     }
 
     .player:hover {
@@ -84,25 +76,23 @@
     .player audio {
       width: 100%;
       border-radius: 5px;
-      background: transparent; /* حذف رنگ پس‌زمینه */
+      background: transparent;
       padding: 5px;
-      border: none; /* حذف حاشیه */
+      border: none;
     }
 
     .player audio::-webkit-media-controls {
-      background: transparent; /* حذف پس‌زمینه */
+      background: transparent;
       border-radius: 5px;
     }
-
   </style>
   <link rel="icon" href="https://sisu1227.github.io/calm-note-player/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- لوگو در گوشه سمت راست بالا -->
+  <!-- لوگو در وسط و بالای صفحه -->
   <img class="logo" src="https://sisu1227.github.io/calm-note-player/logo.png" alt="Logo">
 
   <div class="player">
-    <!-- متن حذف شده -->
     <audio controls autoplay>
       <source src="track2.mp3" type="audio/mpeg">
       مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
@@ -110,6 +100,7 @@
   </div>
 </body>
 </html>
+
 
 
 
